@@ -1,3 +1,4 @@
+// Consolidated JavaScript from PermitFlow website
 $(document).ready(function () {
   // Set current year
   $(".current-year").text(new Date().getFullYear());
