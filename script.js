@@ -288,7 +288,7 @@ $(document).ready(function () {
           width: percentTimeOne + "%",
         });
         if (percentTimeOne >= 100) {
-          $(".singlepermititem").slick("slickNext");
+          $(".singlepermitslider").slick("slickNext");
           progressBarIndexOne++;
           if (progressBarIndexOne > 3) {
             progressBarIndexOne = 0;
@@ -308,7 +308,7 @@ $(document).ready(function () {
     $(".sliderpermittopitem").click(function () {
       clearInterval(tickOne);
       var goToThisIndex = $(this).find(".progressbar").data("slickIndex");
-      $(".singlepermititem").slick("slickGoTo", goToThisIndex, false);
+      $(".singlepermitslider").slick("slickGoTo", goToThisIndex, false);
       startProgressbarOne();
     });
 

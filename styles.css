@@ -699,3 +699,10 @@ body {
     margin-left: 0;
   }
 }
+
+@media screen and (max-width: 991px) {
+
+  .slidermain {
+    opacity: 1 !important;
+  }
+}
