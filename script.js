@@ -403,3 +403,42 @@ $(document).ready(function () {
     ],
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const initResourcesMenu = () => {
+    const resourcesMenuItems = Array.from(
+      document.querySelectorAll(".resources-menu-item")
+    );
+
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      console.log("desktop");
+      const resourcesMenuSecondBlocks = Array.from(
+        document.querySelectorAll(".resources-menu-second-block")
+      );
+
+      resourcesMenuItems.forEach((item) => {
+        const itemOrder = resourcesMenuItems.indexOf(item);
+        item.addEventListener("click", () => {
+          resourcesMenuItems.forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          resourcesMenuItems[itemOrder].classList.add("active");
+
+          resourcesMenuSecondBlocks.forEach((menuCard) => {
+            menuCard.classList.remove("visible");
+          });
+
+          resourcesMenuSecondBlocks[itemOrder].classList.add("visible");
+        });
+      });
+    } else {
+      resourcesMenuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    }
+  };
+  initResourcesMenu();
+});

@@ -706,3 +706,87 @@ body {
     opacity: 1 !important;
   }
 }
+
+.resources-menu-item:hover * {
+  font-weight: 700;
+}
+
+.resources-menu-item:hover .resources-menu-item-bar {
+  width: 2px;
+}
+
+.resources-menu-item:hover .resources-menu-item-arrow {
+  transform: translateX(4px);
+}
+
+
+.resources-menu-dropdown-toggle.w--open {
+  border-width: 2px 2px 0 2px;
+}
+
+@media screen and (max-width: 991px) {
+
+  .resources-menu-item {
+    max-height: 35px;
+  }
+
+  .resources-menu-item.active {
+    max-height: none;
+  }
+
+  .resources-menu-item .resources-menu-item-plus-icon {
+    display: block;
+  }
+
+  .resources-menu-item .resources-menu-item-minus-icon {
+    display: none;
+  }
+
+  .resources-menu-item.active .resources-menu-item-plus-icon {
+    display: none;
+  }
+
+  .resources-menu-item.active .resources-menu-item-minus-icon {
+    display: block;
+  }
+
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 6rem));
+  }
+}
+
+/* Apply scroll animation to desktop carousel */
+.scroll {
+  animation: scroll 40s linear infinite;
+}
+
+/* Mobile scroll animation - moves from right to left */
+@keyframes mob-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 3rem));
+  }
+}
+
+/* Apply mobile scroll animation to mobile carousel */
+.mob-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.w-nav-overlay {
+  width: 100% !important;
+}
+
+.header-new .w-nav {
+  background-color: white !important;
+}
